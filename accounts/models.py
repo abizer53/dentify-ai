@@ -65,6 +65,11 @@ class User(AbstractUser):
     def __str__(self):
         return f'{self.email} : {self.first_name}'
     
+    def save(self, *args, **kwargs):
+        if not self.email.islower():
+            self.email = self.email.lower()
+        super().save(*args, **kwargs)
+    
     def get_full_name(self):
         """
         Return the first_name plus the last_name, with a space in between.

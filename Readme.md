@@ -9,7 +9,7 @@
   
 #### Clone the Project
 ```
-git clone https://github.com/reymusic/dentify-ai.git -b dev
+git clone <https|ssh url> -b dev dentify-ai
 ```
 
 #### Go to Project Directory
@@ -68,9 +68,9 @@ SUPABASE_SERVE_URL = ''
 `You Are all Set to use the Project`<br>
 ##### Run the Project
 ```
-cd .\dentify_ai\
 python manage.py makemigrations
 python manage.py migrate
+python manage.py createsuperuser
 python manage.py runserver
 ```
 
@@ -91,7 +91,6 @@ http://localhost:8000/
 git pull
 .\env\Scripts\activate
 pip install -r requirements.txt
-cd .\dentify_ai\
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
